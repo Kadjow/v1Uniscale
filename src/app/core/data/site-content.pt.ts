@@ -180,25 +180,25 @@ export const siteContentPt: SiteContent = {
   },
   businessProof: {
     id: 'prova',
-    eyebrow: 'Nossos clientes já avançaram',
-    title: 'Empresas que já avançaram com processos mais claros e tecnologia aplicada.',
+    eyebrow: 'Validação real',
+    title: 'Empresas já avançaram com processos mais claros e tecnologia aplicada.',
     description:
-      'Resultados construídos com automação, integração e sistemas pensados para a realidade de cada operação.',
+      'A prova social da Uniscale parte do que já está publicado pela própria marca: relatos, parceiros e uma atuação focada em organizar operações antes de aplicar tecnologia.',
     highlights: [
       {
-        title: 'Depoimentos reais',
+        title: 'Relatos preservados',
         description:
-          'A seção usa os cards de depoimentos publicados no site atual da Uniscale, preservando a validação existente.',
+          'Os cards de depoimento usam as imagens reais já disponíveis no projeto, sem reescrever falas ou criar validações artificiais.',
       },
       {
-        title: 'Parceiros reais',
+        title: 'Marcas existentes',
         description:
-          'Os logos foram extraídos dos assets públicos do site atual para manter a prova social conectada à marca.',
+          'A área de parceiros exibe apenas logos presentes nos assets públicos extraídos do site atual da Uniscale.',
       },
       {
-        title: 'Estrutura escalável',
+        title: 'Base preparada',
         description:
-          'O layout já está preparado para receber novos cases, logos e relatos validados, sem inventar métricas.',
+          'A seção fica pronta para receber novos cases e métricas quando forem validados, mantendo a comunicação comercial sem exageros.',
       },
     ],
     testimonials: [
@@ -207,7 +207,7 @@ export const siteContentPt: SiteContent = {
       { src: 'assets/images/proof/testimonial-3.png', alt: 'Depoimento real publicado no site da Uniscale' },
       { src: 'assets/images/proof/testimonial-4.png', alt: 'Depoimento real publicado no site da Uniscale' },
     ],
-    partnersLabel: 'Veja as empresas que já ajudamos:',
+    partnersLabel: 'Empresas e parceiros presentes nos materiais atuais da Uniscale:',
     partners: [
       { src: 'assets/images/proof/partner-braff.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
       { src: 'assets/images/proof/partner-comuniq.png', alt: 'Logo de parceiro publicado no site da Uniscale' },

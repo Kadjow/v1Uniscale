@@ -20,37 +20,33 @@
 .operation-problems-section {
   position: relative;
   max-width: var(--layout-max-width);
-  padding: clamp(4.25rem, 10vw, 7.5rem) clamp(1rem, 4vw, 4rem);
+  padding: clamp(3.8rem, 9vw, 7.5rem) clamp(1rem, 4vw, 4rem);
   margin: 0 auto;
 }
 
-.operation-problems-section::before {
-  position: absolute;
-  inset: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 4rem) auto;
-  height: clamp(13rem, 24vw, 18rem);
-  border: 1px solid rgba(194, 160, 255, 0.1);
-  border-radius: var(--radius-panel);
-  pointer-events: none;
-  content: '';
-  background:
-    linear-gradient(135deg, rgba(127, 26, 226, 0.09), rgba(255, 255, 255, 0.02)),
-    rgba(255, 255, 255, 0.012);
-}
-
-.operation-problems-heading {
+.operation-problems-intro {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 0.62fr);
-  gap: clamp(1.5rem, 5vw, 4rem);
-  align-items: end;
+  grid-template-columns: minmax(0, 0.94fr) minmax(18rem, 0.58fr);
+  gap: clamp(1.25rem, 4.2vw, 3.5rem);
+  align-items: center;
+  min-height: clamp(15rem, 24vw, 20rem);
+  padding: clamp(1.35rem, 3vw, 2.4rem);
+  border: 1px solid rgba(194, 160, 255, 0.13);
+  border-radius: var(--radius-panel);
+  background:
+    radial-gradient(circle at 0 0, rgba(162, 91, 255, 0.12), transparent 18rem),
+    linear-gradient(135deg, rgba(127, 26, 226, 0.1), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.012);
+  overflow: hidden;
 }
 
-.operation-problems-heading p,
-.operation-problems-heading span {
+.operation-problems-intro p,
+.operation-problems-intro span {
   color: var(--color-text-muted);
 }
 
-.operation-problems-heading p {
+.operation-problem-badge {
   grid-column: 1 / -1;
   width: fit-content;
   padding: 0.42rem 0.72rem;
@@ -65,138 +61,145 @@
   text-transform: uppercase;
 }
 
-.operation-problems-heading h2 {
+.operation-problems-intro h2 {
   max-width: 19ch;
   margin: 0;
-  font-size: clamp(2.05rem, 4.8vw, 4.2rem);
-  line-height: 1;
+  font-size: clamp(2rem, 4.55vw, 4.05rem);
+  line-height: 1.02;
 }
 
-.operation-problems-heading span {
+.operation-problems-intro span {
   display: block;
   max-width: 34rem;
-  font-size: clamp(1rem, 1.7vw, 1.14rem);
-  line-height: 1.72;
+  margin: 0 0 0 auto;
+  font-size: clamp(0.98rem, 1.45vw, 1.1rem);
+  line-height: 1.68;
 }
 
-.operation-friction-board {
+.operation-problems-grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(0.82rem, 1.35vw, 1.08rem);
   padding: 0;
-  margin: clamp(2.25rem, 6vw, 4.25rem) 0 0;
+  margin: clamp(1.6rem, 4.4vw, 3.2rem) 0 0;
   list-style: none;
 }
 
-.operation-friction-board li {
-  grid-column: span 2;
+.operation-problems-grid li {
+  grid-column: span 4;
 }
 
-.operation-friction-board li:nth-child(1),
-.operation-friction-board li:nth-child(2) {
-  grid-column: span 3;
+.operation-problems-grid li:nth-child(1),
+.operation-problems-grid li:nth-child(2) {
+  grid-column: span 6;
 }
 
-.operation-friction-card {
+.operation-problem-panel {
   position: relative;
   display: grid;
-  align-content: space-between;
-  min-height: 17rem;
+  grid-template-rows: auto auto 1fr;
+  min-height: clamp(13.8rem, 20vw, 15.7rem);
   height: 100%;
-  padding: clamp(1.25rem, 3vw, 1.75rem);
-  border: 1px solid rgba(194, 160, 255, 0.19);
+  padding: clamp(1.05rem, 2vw, 1.4rem);
+  border: 1px solid rgba(194, 160, 255, 0.16);
   border-radius: var(--radius-card);
   background:
-    radial-gradient(circle at 0 0, rgba(162, 91, 255, 0.1), transparent 10rem),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.02)),
-    rgba(13, 2, 30, 0.84);
-  box-shadow: var(--shadow-card-premium);
+    radial-gradient(circle at 100% 0, rgba(162, 91, 255, 0.08), transparent 11rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.018)),
+    rgba(13, 2, 30, 0.82);
+  box-shadow: 0 1.1rem 3rem rgba(5, 0, 14, 0.24), 0 0 0 1px rgba(255, 255, 255, 0.026) inset;
   overflow: hidden;
-  transition:
-    border-color var(--transition-smooth),
-    box-shadow var(--transition-smooth),
-    transform var(--transition-smooth);
 }
 
-.operation-friction-card::before,
-.operation-friction-card::after {
+.operation-problem-panel::before {
   position: absolute;
+  inset: 0;
   pointer-events: none;
   content: '';
+  background: linear-gradient(90deg, rgba(117, 255, 196, 0.055), transparent 38%);
+  opacity: 0.72;
 }
 
-.operation-friction-card::before {
-  inset: 1rem auto auto 1rem;
-  width: 3.2rem;
-  height: 3.2rem;
-  border: 1px solid rgba(194, 160, 255, 0.14);
-  border-radius: 0.8rem;
-  background: rgba(255, 255, 255, 0.02);
-  transform: rotate(12deg);
-}
-
-.operation-friction-card::after {
-  right: 1rem;
-  bottom: 1rem;
-  width: 44%;
-  height: 0.2rem;
-  background: linear-gradient(90deg, rgba(153, 72, 232, 0.18), rgba(117, 255, 196, 0.42));
-}
-
-.operation-friction-card:hover {
-  border-color: rgba(218, 200, 255, 0.36);
-  box-shadow: 0 1.6rem 4.4rem rgba(5, 0, 14, 0.34), 0 0 2.8rem rgba(153, 72, 232, 0.1);
+.operation-problem-panel:hover {
+  border-color: rgba(218, 200, 255, 0.31);
+  box-shadow: 0 1.35rem 3.6rem rgba(5, 0, 14, 0.3), 0 0 2.1rem rgba(153, 72, 232, 0.08);
   transform: translateY(-3px);
 }
 
-.operation-friction-marker {
+.operation-problem-marker {
   position: relative;
   display: inline-grid;
-  width: 2.45rem;
-  height: 2.45rem;
+  width: 2.18rem;
+  height: 2.18rem;
   place-items: center;
   margin-left: auto;
-  border: 1px solid rgba(117, 255, 196, 0.26);
-  border-radius: 0.72rem;
-  background: rgba(63, 255, 188, 0.075);
+  border: 1px solid rgba(117, 255, 196, 0.22);
+  border-radius: 0.62rem;
+  background: rgba(63, 255, 188, 0.065);
   color: var(--color-positive);
-  font-size: 0.82rem;
+  font-size: 0.76rem;
   font-weight: 800;
 }
 
-.operation-friction-card h3 {
+.operation-problem-panel h3 {
   position: relative;
-  max-width: 17rem;
-  margin: clamp(2rem, 4vw, 3.4rem) 0 0;
-  font-size: clamp(1.28rem, 2.1vw, 1.68rem);
-  line-height: 1.12;
+  max-width: 18rem;
+  margin: clamp(1.15rem, 2.8vw, 1.75rem) 0 0;
+  font-size: clamp(1.12rem, 1.55vw, 1.42rem);
+  line-height: 1.16;
 }
 
-.operation-friction-card p {
+.operation-problem-panel p {
   position: relative;
   max-width: 31rem;
-  margin: 1rem 0 0;
+  margin: 0.78rem 0 0;
   color: var(--color-text-muted);
-  line-height: 1.72;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 960px) {
-  .operation-problems-heading,
-  .operation-friction-board {
+  .operation-problems-intro,
+  .operation-problems-grid {
     grid-template-columns: 1fr;
   }
 
-  .operation-problems-heading h2 {
+  .operation-problems-intro {
+    min-height: auto;
+  }
+
+  .operation-problems-intro h2 {
     max-width: 16ch;
   }
 
-  .operation-friction-board li,
-  .operation-friction-board li:nth-child(1),
-  .operation-friction-board li:nth-child(2) {
+  .operation-problems-intro span {
+    max-width: 42rem;
+    margin-left: 0;
+  }
+
+  .operation-problems-grid li,
+  .operation-problems-grid li:nth-child(1),
+  .operation-problems-grid li:nth-child(2) {
     grid-column: auto;
   }
 
-  .operation-friction-card {
+  .operation-problem-panel {
     min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .operation-problems-intro {
+    padding: 1.15rem;
+    border-radius: 1rem;
+  }
+
+  .operation-problems-intro h2 {
+    max-width: 100%;
+    font-size: clamp(1.72rem, 8.6vw, 2.05rem);
+  }
+
+  .operation-problem-panel {
+    padding: 1rem;
   }
 }

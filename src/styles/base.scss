@@ -7,7 +7,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: clamp(5.75rem, 8vw, 7rem);
 }
 
 body {
@@ -31,12 +31,6 @@ body {
 h1,
 h2,
 h3,
-.hero-message h1,
-.hero-eyebrow,
-.hero-primary-action,
-.hero-secondary-action,
-.contact-submit-action,
-.section-badge,
 [class*='-heading'] > p:first-child,
 [class*='-heading'] h2 {
   font-family: var(--font-display);
@@ -45,15 +39,9 @@ h3,
 h1,
 h2,
 h3,
-.hero-message h1,
 [class*='-heading'] h2 {
   line-height: 1.1;
   letter-spacing: -0.02em;
-}
-
-.hero-message h1 {
-  font-size: clamp(2.5rem, 5vw, 4.6rem);
-  font-weight: 760;
 }
 body::before,
 body::after {
@@ -81,6 +69,10 @@ body::after {
     linear-gradient(180deg, rgba(60, 12, 99, 0.1), rgba(32, 6, 60, 0.08));
   mix-blend-mode: screen;
   opacity: 0.86;
+}
+
+main section[id] {
+  scroll-margin-top: clamp(5.75rem, 8vw, 7rem);
 }
 
 app-root {

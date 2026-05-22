@@ -3,7 +3,11 @@
     <img src="assets/images/logo-uniscale.png" [alt]="header().logoAlt" />
   </a>
 
-  <nav class="site-header-navigation" [class.site-header-navigation--open]="isMenuOpen()">
+  <nav
+    class="site-header-navigation"
+    aria-label="Navegacao principal"
+    [class.site-header-navigation--open]="isMenuOpen()"
+  >
     <ul>
       @for (link of header().navigation; track link.href) {
         <li>
@@ -16,6 +20,7 @@
   <button
     class="site-header-menu-button"
     type="button"
+    [class.site-header-menu-button--open]="isMenuOpen()"
     [attr.aria-label]="isMenuOpen() ? header().menuCloseLabel : header().menuOpenLabel"
     [attr.aria-expanded]="isMenuOpen()"
     (click)="toggleMenu()"

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { SiteFooterComponent } from '../../core/layout/site-footer/site-footer.component';
 import { SiteHeaderComponent } from '../../core/layout/site-header/site-header.component';
 import { siteContentPt } from '../../core/data/site-content.pt';
@@ -26,6 +26,23 @@ import { StrategicSolutionsSectionComponent } from './sections/strategic-solutio
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements AfterViewInit {
   protected readonly content = siteContentPt;
+
+  ngAfterViewInit(): void {
+    this.scrollToCurrentFragment();
+  }
+
+  @HostListener('window:hashchange')
+  protected scrollToCurrentFragment(): void {
+    window.setTimeout(() => {
+      const fragment = window.location.hash.slice(1);
+
+      if (!fragment) {
+        return;
+      }
+
+      document.getElementById(decodeURIComponent(fragment))?.scrollIntoView({ block: 'start' });
+    });
+  }
 }

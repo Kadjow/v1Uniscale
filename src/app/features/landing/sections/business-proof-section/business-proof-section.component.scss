@@ -1,59 +1,36 @@
 :host {
   display: block;
-  position: relative;
   background:
-    radial-gradient(circle at 88% 20%, rgba(162, 91, 255, 0.14), transparent 26rem),
-    radial-gradient(circle at 8% 88%, rgba(117, 255, 196, 0.05), transparent 23rem),
-    linear-gradient(180deg, rgba(14, 2, 30, 0.94), rgba(31, 5, 60, 0.78), rgba(13, 2, 28, 0.95));
-  overflow: hidden;
-}
-
-:host::after {
-  position: absolute;
-  inset: auto clamp(1rem, 4vw, 4rem) 0;
-  height: 1px;
-  pointer-events: none;
-  content: '';
-  background: linear-gradient(90deg, transparent, rgba(218, 200, 255, 0.23), transparent);
+    linear-gradient(115deg, rgba(117, 255, 196, 0.06), transparent 34%),
+    linear-gradient(180deg, #0b0118, #16032d 44%, #0b0118);
 }
 
 .business-proof-section {
   position: relative;
   max-width: var(--layout-max-width);
-  padding: clamp(4.25rem, 10vw, 7.5rem) clamp(1rem, 4vw, 4rem);
+  padding: clamp(4.25rem, 10vw, 7.25rem) clamp(1rem, 4vw, 4rem);
   margin: 0 auto;
 }
 
-.business-proof-section::before {
-  position: absolute;
-  inset: clamp(4.25rem, 10vw, 7.5rem) clamp(1rem, 4vw, 4rem) auto;
-  height: clamp(15rem, 28vw, 24rem);
-  border: 1px solid rgba(194, 160, 255, 0.16);
-  border-radius: var(--radius-panel);
-  pointer-events: none;
-  content: '';
-  background:
-    radial-gradient(circle at 82% 0, rgba(162, 91, 255, 0.12), transparent 18rem),
-    linear-gradient(135deg, rgba(127, 26, 226, 0.16), rgba(255, 255, 255, 0.04)),
-    rgba(16, 3, 35, 0.36);
-  box-shadow: var(--shadow-section-depth);
-  opacity: 0.78;
+.business-proof-shell,
+.business-proof-partners {
+  display: grid;
+  gap: clamp(1.2rem, 3vw, 2rem);
 }
 
-.business-proof-heading {
-  position: relative;
-  max-width: 60rem;
-  padding: clamp(1.2rem, 3vw, 2rem);
+.business-proof-shell {
+  grid-template-columns: minmax(0, 1fr) minmax(21rem, 0.48fr);
+  align-items: end;
 }
 
 .business-proof-heading p {
   width: fit-content;
   padding: 0.42rem 0.72rem;
   margin: 0 0 1rem;
-  border: 1px solid rgba(186, 145, 255, 0.24);
+  border: 1px solid rgba(117, 255, 196, 0.22);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.045);
-  color: #d9c8ff;
+  background: rgba(117, 255, 196, 0.06);
+  color: #b9ffe4;
   font-size: 0.76rem;
   font-weight: 750;
   letter-spacing: 0.08em;
@@ -61,181 +38,177 @@
 }
 
 .business-proof-heading h2 {
-  max-width: 20ch;
+  max-width: 19ch;
   margin: 0;
-  font-size: clamp(2.05rem, 4.8vw, 4.2rem);
-  line-height: 1;
+  font-size: clamp(2.05rem, 4.8vw, 4rem);
+  line-height: 1.02;
 }
 
 .business-proof-heading span {
   display: block;
-  max-width: 46rem;
+  max-width: 47rem;
   margin-top: 1.15rem;
-  color: var(--color-text-muted);
   font-size: clamp(1rem, 1.7vw, 1.14rem);
-  line-height: 1.72;
 }
 
-.business-proof-highlights {
-  position: relative;
+.business-proof-summary,
+.business-proof-testimonials figure,
+.business-proof-partners {
+  border: 1px solid rgba(212, 194, 255, 0.16);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)),
+    rgba(10, 2, 24, 0.82);
+  box-shadow: var(--shadow-card-premium);
+}
+
+.business-proof-summary,
+.business-proof-partners {
+  border-radius: var(--radius-panel);
+}
+
+.business-proof-summary ul,
+.business-proof-partners ul {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
   padding: 0;
-  margin: clamp(2rem, 5vw, 3.2rem) 0 0;
+  margin: 0;
   list-style: none;
 }
 
-.business-proof-panel {
-  min-height: 12rem;
-  height: 100%;
-  padding: clamp(1.2rem, 3vw, 1.55rem);
-  border: 1px solid rgba(194, 160, 255, 0.18);
-  border-radius: var(--radius-card);
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.02)),
-    rgba(10, 2, 24, 0.84);
-  box-shadow: var(--shadow-card-premium);
-  transition:
-    border-color var(--transition-smooth),
-    box-shadow var(--transition-smooth),
-    transform var(--transition-smooth);
+.business-proof-summary li {
+  padding: clamp(1.1rem, 2.4vw, 1.45rem);
 }
 
-.business-proof-panel:hover {
-  border-color: rgba(117, 255, 196, 0.3);
-  box-shadow: 0 1.5rem 4.2rem rgba(5, 0, 14, 0.32), 0 0 2rem rgba(117, 255, 196, 0.07);
-  transform: translateY(-3px);
+.business-proof-summary li + li {
+  border-top: 1px solid rgba(212, 194, 255, 0.12);
 }
 
-.business-proof-panel h3 {
+.business-proof-summary h3 {
   margin: 0;
-  font-size: clamp(1.18rem, 2vw, 1.48rem);
-  line-height: 1.15;
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
 }
 
-.business-proof-panel p,
+.business-proof-summary p {
+  margin: 0.62rem 0 0;
+  font-size: 0.94rem;
+}
+
+.business-proof-heading span,
+.business-proof-summary p,
 .business-proof-note,
 .business-proof-partners p {
   color: var(--color-text-muted);
-  line-height: 1.72;
+  line-height: 1.68;
 }
 
-.business-proof-panel p {
-  margin: 1rem 0 0;
+.business-proof-evidence {
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.35rem);
+  margin-top: clamp(2.25rem, 5vw, 3.6rem);
 }
 
 .business-proof-testimonials {
-  position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: clamp(1.5rem, 5vw, 3rem);
+  grid-template-columns: 1.18fr repeat(3, minmax(0, 1fr));
+  gap: clamp(0.8rem, 1.8vw, 1rem);
 }
 
 .business-proof-testimonials figure {
   display: grid;
   min-width: 0;
   margin: 0;
-  border: 1px solid rgba(194, 160, 255, 0.18);
   border-radius: var(--radius-card);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.02)),
-    rgba(8, 1, 20, 0.72);
-  box-shadow: var(--shadow-card-premium);
   overflow: hidden;
+}
+
+.business-proof-testimonials .is-featured {
+  border-color: rgba(117, 255, 196, 0.24);
 }
 
 .business-proof-testimonials img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 411 / 557;
   object-fit: cover;
 }
 
 .business-proof-partners {
-  position: relative;
-  display: grid;
-  gap: 1rem;
-  margin-top: clamp(1.5rem, 5vw, 3rem);
-  padding: clamp(1rem, 3vw, 1.5rem);
-  border: 1px solid rgba(194, 160, 255, 0.18);
-  border-radius: var(--radius-panel);
+  grid-template-columns: minmax(12rem, 0.28fr) minmax(0, 1fr);
+  align-items: center;
+  padding: clamp(1rem, 3vw, 1.45rem);
   background:
-    radial-gradient(circle at 94% 0, rgba(117, 255, 196, 0.06), transparent 16rem),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.024)),
-    rgba(10, 2, 24, 0.82);
-  box-shadow: var(--shadow-card-premium);
+    linear-gradient(90deg, rgba(117, 255, 196, 0.052), transparent 40%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.018)),
+    rgba(10, 2, 24, 0.84);
 }
 
 .business-proof-partners p {
+  max-width: 15rem;
   margin: 0;
-  font-size: 0.95rem;
-  font-weight: 680;
+  font-size: 0.96rem;
+  font-weight: 700;
 }
 
 .business-proof-partners ul {
-  display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.75rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  gap: 0.7rem;
 }
 
 .business-proof-partners li {
   display: grid;
-  min-height: 6.6rem;
+  min-height: 6.75rem;
   place-items: center;
   padding: 1rem;
-  border: 1px solid rgba(194, 160, 255, 0.14);
+  border: 1px solid rgba(212, 194, 255, 0.13);
   border-radius: var(--radius-card);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.056), rgba(255, 255, 255, 0.02)),
-    rgba(7, 1, 18, 0.54);
+  background: rgba(255, 255, 255, 0.045);
 }
 
 .business-proof-partners img {
-  max-width: min(100%, 11rem);
-  max-height: 4.6rem;
+  width: auto;
+  max-width: min(100%, 11.5rem);
+  max-height: 4.8rem;
   object-fit: contain;
 }
 
 .business-proof-note {
-  position: relative;
-  max-width: 52rem;
-  padding: 0.9rem 1rem;
-  margin: 1.4rem 0 0;
-  border: 1px solid rgba(194, 160, 255, 0.14);
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.035);
-  font-size: 0.9rem;
+  max-width: 56rem;
+  padding: 0.95rem 1.05rem;
+  margin: 1.25rem 0 0;
+  border: 1px solid rgba(117, 255, 196, 0.16);
+  border-radius: var(--radius-card);
+  background: rgba(117, 255, 196, 0.045);
+  font-size: 0.91rem;
 }
 
-@media (max-width: 1080px) {
-  .business-proof-testimonials {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 1120px) {
+  .business-proof-shell,
+  .business-proof-partners {
+    grid-template-columns: 1fr;
   }
 
-  .business-proof-partners ul {
+  .business-proof-summary ul {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .business-proof-summary li + li {
+    border-top: 0;
+    border-left: 1px solid rgba(212, 194, 255, 0.12);
   }
 }
 
 @media (max-width: 900px) {
-  .business-proof-section::before {
-    display: none;
+  .business-proof-testimonials,
+  .business-proof-partners ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .business-proof-heading {
-    padding: 0;
-  }
-
-  .business-proof-highlights {
+  .business-proof-summary ul {
     grid-template-columns: 1fr;
   }
 
-  .business-proof-panel {
-    min-height: auto;
+  .business-proof-summary li + li {
+    border-top: 1px solid rgba(212, 194, 255, 0.12);
+    border-left: 0;
   }
 }
 
@@ -243,5 +216,18 @@
   .business-proof-testimonials,
   .business-proof-partners ul {
     grid-template-columns: 1fr;
+  }
+
+  .business-proof-testimonials figure {
+    max-width: 27rem;
+    margin: 0 auto;
+  }
+
+  .business-proof-partners li {
+    min-height: 6.2rem;
+  }
+
+  .business-proof-partners img {
+    max-width: min(100%, 13rem);
   }
 }
