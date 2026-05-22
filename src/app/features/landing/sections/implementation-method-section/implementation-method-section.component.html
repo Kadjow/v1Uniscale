@@ -1,0 +1,22 @@
+<section [id]="section().id" class="implementation-method-section">
+  <header class="implementation-method-heading" appRevealOnScroll>
+    <p>{{ section().eyebrow }}</p>
+    <h2>{{ section().title }}</h2>
+    <span>{{ section().description }}</span>
+  </header>
+
+  <ol class="implementation-journey">
+    @for (step of section().steps; track step.marker; let isLast = $last) {
+      <li appRevealOnScroll>
+        <article class="implementation-journey-step">
+          <strong class="implementation-journey-marker">{{ step.marker }}</strong>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+          @if (!isLast) {
+            <span class="implementation-journey-link" aria-hidden="true"></span>
+          }
+        </article>
+      </li>
+    }
+  </ol>
+</section>

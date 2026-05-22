@@ -1,0 +1,194 @@
+:host {
+  display: block;
+  position: relative;
+  background:
+    radial-gradient(circle at 16% 62%, rgba(153, 72, 232, 0.15), transparent 27rem),
+    radial-gradient(circle at 86% 26%, rgba(117, 255, 196, 0.05), transparent 22rem),
+    linear-gradient(180deg, rgba(14, 2, 30, 0.94), rgba(32, 5, 62, 0.72), rgba(16, 2, 34, 0.94));
+  overflow: hidden;
+}
+
+:host::before {
+  position: absolute;
+  inset: clamp(1rem, 3vw, 2rem) 0;
+  pointer-events: none;
+  content: '';
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.018)),
+    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.02) 48%, transparent);
+}
+
+:host::after {
+  position: absolute;
+  inset: auto clamp(1rem, 4vw, 4rem) 0;
+  height: 1px;
+  pointer-events: none;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgba(117, 255, 196, 0.12), rgba(218, 200, 255, 0.2), transparent);
+}
+
+.implementation-method-section {
+  position: relative;
+  max-width: var(--layout-max-width);
+  padding: clamp(4.25rem, 10vw, 7.5rem) clamp(1rem, 4vw, 4rem);
+  margin: 0 auto;
+}
+
+.implementation-method-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(18rem, 0.6fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+}
+
+.implementation-method-heading p {
+  grid-column: 1 / -1;
+  width: fit-content;
+  padding: 0.42rem 0.72rem;
+  margin: 0;
+  border: 1px solid rgba(186, 145, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #d9c8ff;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.implementation-method-heading h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.15rem, 5.2vw, 4.5rem);
+  line-height: 0.98;
+}
+
+.implementation-method-heading span {
+  display: block;
+  max-width: 34rem;
+  color: var(--color-text-muted);
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+  line-height: 1.72;
+}
+
+.implementation-journey {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: clamp(2.25rem, 6vw, 4.25rem) 0 0;
+  list-style: none;
+}
+
+.implementation-journey::before {
+  position: absolute;
+  top: 2.15rem;
+  right: 8%;
+  left: 8%;
+  height: 1px;
+  pointer-events: none;
+  content: '';
+  background: linear-gradient(90deg, rgba(117, 255, 196, 0.14), rgba(153, 72, 232, 0.5), rgba(117, 255, 196, 0.14));
+}
+
+.implementation-journey-step {
+  position: relative;
+  display: grid;
+  align-content: start;
+  min-height: 21rem;
+  height: 100%;
+  padding: clamp(1.2rem, 2.5vw, 1.55rem);
+  border: 1px solid rgba(194, 160, 255, 0.18);
+  border-radius: var(--radius-card);
+  background:
+    radial-gradient(circle at 50% 0, rgba(153, 72, 232, 0.13), transparent 11rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.078), rgba(255, 255, 255, 0.022)),
+    rgba(10, 2, 24, 0.82);
+  box-shadow: var(--shadow-card-premium);
+  transition:
+    border-color var(--transition-smooth),
+    transform var(--transition-smooth),
+    background-color var(--transition-smooth);
+}
+
+.implementation-journey-step:hover {
+  border-color: rgba(218, 200, 255, 0.34);
+  background-color: rgba(17, 3, 38, 0.86);
+  transform: translateY(-3px);
+}
+
+.implementation-journey-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(117, 255, 196, 0.26);
+  border-radius: 999px;
+  background: rgba(63, 255, 188, 0.08);
+  color: var(--color-positive);
+  box-shadow: 0 0 0 0.45rem rgba(63, 255, 188, 0.035);
+  font-size: 0.84rem;
+}
+
+.implementation-journey-step h3 {
+  margin: clamp(2.5rem, 4vw, 4rem) 0 0;
+  font-size: clamp(1.25rem, 2vw, 1.58rem);
+  line-height: 1.15;
+}
+
+.implementation-journey-step p {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.72;
+}
+
+.implementation-journey-link {
+  position: absolute;
+  top: 2.12rem;
+  right: -1rem;
+  width: 1rem;
+  height: 1px;
+  background: rgba(117, 255, 196, 0.55);
+}
+
+@media (max-width: 1040px) {
+  .implementation-method-heading,
+  .implementation-journey {
+    grid-template-columns: 1fr;
+  }
+
+  .implementation-journey::before {
+    top: 2rem;
+    bottom: 2rem;
+    left: 1.38rem;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, rgba(117, 255, 196, 0.14), rgba(153, 72, 232, 0.5), rgba(117, 255, 196, 0.14));
+  }
+
+  .implementation-journey-step {
+    min-height: auto;
+    padding-left: 4.25rem;
+  }
+
+  .implementation-journey-marker {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+
+  .implementation-journey-step h3 {
+    margin-top: 0;
+  }
+
+  .implementation-journey-link {
+    top: auto;
+    right: auto;
+    bottom: -1rem;
+    left: 1.38rem;
+    width: 1px;
+    height: 1rem;
+  }
+}

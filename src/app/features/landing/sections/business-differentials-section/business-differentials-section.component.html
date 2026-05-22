@@ -1,0 +1,19 @@
+<section [id]="section().id" class="business-differentials-section">
+  <header class="business-differentials-heading" appRevealOnScroll>
+    <p>{{ section().eyebrow }}</p>
+    <h2>{{ section().title }}</h2>
+    <span>{{ section().description }}</span>
+  </header>
+
+  <ul class="business-differential-grid">
+    @for (differential of section().cards; track differential.title; let position = $index) {
+      <li appRevealOnScroll>
+        <article class="business-differential-panel">
+          <span class="business-differential-number">{{ position + 1 }}</span>
+          <h3>{{ differential.title }}</h3>
+          <p>{{ differential.description }}</p>
+        </article>
+      </li>
+    }
+  </ul>
+</section>

@@ -1,0 +1,30 @@
+<footer class="site-footer">
+  <section class="site-footer-brand">
+    <img src="assets/images/logo-uniscale.png" [alt]="footer().logoAlt" />
+    <p>{{ footer().description }}</p>
+  </section>
+
+  <nav class="site-footer-solutions" [attr.aria-label]="footer().solutionTitle">
+    <h2>{{ footer().solutionTitle }}</h2>
+    <ul>
+      @for (solution of footer().solutions; track solution) {
+        <li>{{ solution }}</li>
+      }
+    </ul>
+  </nav>
+
+  <section class="site-footer-contact">
+    <h2>{{ footer().contactTitle }}</h2>
+    <a [href]="'mailto:' + footer().email">{{ footer().email }}</a>
+    <a [href]="'tel:' + footer().phone">{{ footer().phone }}</a>
+  </section>
+
+  <section class="site-footer-legal">
+    <p>{{ footer().copyright }}</p>
+    <ul>
+      @for (link of footer().links; track link.label) {
+        <li><a [href]="link.href">{{ link.label }}</a></li>
+      }
+    </ul>
+  </section>
+</footer>

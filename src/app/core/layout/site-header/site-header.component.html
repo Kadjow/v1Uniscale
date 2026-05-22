@@ -1,0 +1,26 @@
+<header class="site-header" [class.site-header--scrolled]="isScrolled()">
+  <a class="site-header-logo" href="#top" (click)="closeMenu()">
+    <img src="assets/images/logo-uniscale.png" [alt]="header().logoAlt" />
+  </a>
+
+  <nav class="site-header-navigation" [class.site-header-navigation--open]="isMenuOpen()">
+    <ul>
+      @for (link of header().navigation; track link.href) {
+        <li>
+          <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <button
+    class="site-header-menu-button"
+    type="button"
+    [attr.aria-label]="isMenuOpen() ? header().menuCloseLabel : header().menuOpenLabel"
+    [attr.aria-expanded]="isMenuOpen()"
+    (click)="toggleMenu()"
+  >
+    <span></span>
+    <span></span>
+  </button>
+</header>

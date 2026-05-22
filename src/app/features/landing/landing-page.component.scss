@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 76% 8rem, rgba(162, 91, 255, 0.15), transparent 30rem),
+    radial-gradient(circle at -12rem 42rem, rgba(127, 26, 226, 0.13), transparent 36rem),
+    linear-gradient(180deg, rgba(34, 7, 62, 0.72) 0%, rgba(16, 1, 31, 0.84) 32rem, rgba(6, 0, 15, 0.94) 100%);
+  color: var(--color-text-primary);
+}
+
+main {
+  position: relative;
+  background:
+    linear-gradient(180deg, transparent 0, rgba(25, 4, 48, 0.22) 34rem, transparent 58rem),
+    radial-gradient(circle at 100% 48rem, rgba(162, 91, 255, 0.09), transparent 28rem),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.018));
+  overflow: hidden;
+}

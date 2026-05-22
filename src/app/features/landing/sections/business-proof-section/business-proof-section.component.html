@@ -1,0 +1,39 @@
+<section [id]="section().id" class="business-proof-section">
+  <header class="business-proof-heading" appRevealOnScroll>
+    <p>{{ section().eyebrow }}</p>
+    <h2>{{ section().title }}</h2>
+    <span>{{ section().description }}</span>
+  </header>
+
+  <ul class="business-proof-highlights">
+    @for (highlight of section().highlights; track highlight.title) {
+      <li appRevealOnScroll>
+        <article class="business-proof-panel">
+          <h3>{{ highlight.title }}</h3>
+          <p>{{ highlight.description }}</p>
+        </article>
+      </li>
+    }
+  </ul>
+
+  <div class="business-proof-testimonials" appRevealOnScroll>
+    @for (testimonial of section().testimonials; track testimonial.src) {
+      <figure>
+        <img [src]="testimonial.src" [alt]="testimonial.alt" loading="lazy" />
+      </figure>
+    }
+  </div>
+
+  <section class="business-proof-partners" aria-label="Empresas que já avançaram com a Uniscale" appRevealOnScroll>
+    <p>{{ section().partnersLabel }}</p>
+    <ul>
+      @for (partner of section().partners; track partner.src) {
+        <li>
+          <img [src]="partner.src" [alt]="partner.alt" loading="lazy" />
+        </li>
+      }
+    </ul>
+  </section>
+
+  <p class="business-proof-note" appRevealOnScroll>{{ section().note }}</p>
+</section>

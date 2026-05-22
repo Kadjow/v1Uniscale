@@ -1,0 +1,202 @@
+:host {
+  display: block;
+  position: relative;
+  background:
+    radial-gradient(circle at 10% 18%, rgba(162, 91, 255, 0.11), transparent 24rem),
+    radial-gradient(circle at 88% 80%, rgba(127, 26, 226, 0.13), transparent 28rem),
+    linear-gradient(180deg, rgba(15, 2, 31, 0.92), rgba(23, 4, 47, 0.88) 48%, rgba(14, 2, 30, 0.94));
+  overflow: hidden;
+}
+
+:host::after {
+  position: absolute;
+  inset: auto clamp(1rem, 4vw, 4rem) 0;
+  height: 1px;
+  pointer-events: none;
+  content: '';
+  background: linear-gradient(90deg, transparent, rgba(117, 255, 196, 0.12), rgba(218, 200, 255, 0.22), transparent);
+}
+
+.operation-problems-section {
+  position: relative;
+  max-width: var(--layout-max-width);
+  padding: clamp(4.25rem, 10vw, 7.5rem) clamp(1rem, 4vw, 4rem);
+  margin: 0 auto;
+}
+
+.operation-problems-section::before {
+  position: absolute;
+  inset: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 4rem) auto;
+  height: clamp(13rem, 24vw, 18rem);
+  border: 1px solid rgba(194, 160, 255, 0.1);
+  border-radius: var(--radius-panel);
+  pointer-events: none;
+  content: '';
+  background:
+    linear-gradient(135deg, rgba(127, 26, 226, 0.09), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.012);
+}
+
+.operation-problems-heading {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 0.62fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+}
+
+.operation-problems-heading p,
+.operation-problems-heading span {
+  color: var(--color-text-muted);
+}
+
+.operation-problems-heading p {
+  grid-column: 1 / -1;
+  width: fit-content;
+  padding: 0.42rem 0.72rem;
+  margin: 0;
+  border: 1px solid rgba(186, 145, 255, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #d9c8ff;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.operation-problems-heading h2 {
+  max-width: 19ch;
+  margin: 0;
+  font-size: clamp(2.05rem, 4.8vw, 4.2rem);
+  line-height: 1;
+}
+
+.operation-problems-heading span {
+  display: block;
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+  line-height: 1.72;
+}
+
+.operation-friction-board {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: clamp(2.25rem, 6vw, 4.25rem) 0 0;
+  list-style: none;
+}
+
+.operation-friction-board li {
+  grid-column: span 2;
+}
+
+.operation-friction-board li:nth-child(1),
+.operation-friction-board li:nth-child(2) {
+  grid-column: span 3;
+}
+
+.operation-friction-card {
+  position: relative;
+  display: grid;
+  align-content: space-between;
+  min-height: 17rem;
+  height: 100%;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid rgba(194, 160, 255, 0.19);
+  border-radius: var(--radius-card);
+  background:
+    radial-gradient(circle at 0 0, rgba(162, 91, 255, 0.1), transparent 10rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.02)),
+    rgba(13, 2, 30, 0.84);
+  box-shadow: var(--shadow-card-premium);
+  overflow: hidden;
+  transition:
+    border-color var(--transition-smooth),
+    box-shadow var(--transition-smooth),
+    transform var(--transition-smooth);
+}
+
+.operation-friction-card::before,
+.operation-friction-card::after {
+  position: absolute;
+  pointer-events: none;
+  content: '';
+}
+
+.operation-friction-card::before {
+  inset: 1rem auto auto 1rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid rgba(194, 160, 255, 0.14);
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+  transform: rotate(12deg);
+}
+
+.operation-friction-card::after {
+  right: 1rem;
+  bottom: 1rem;
+  width: 44%;
+  height: 0.2rem;
+  background: linear-gradient(90deg, rgba(153, 72, 232, 0.18), rgba(117, 255, 196, 0.42));
+}
+
+.operation-friction-card:hover {
+  border-color: rgba(218, 200, 255, 0.36);
+  box-shadow: 0 1.6rem 4.4rem rgba(5, 0, 14, 0.34), 0 0 2.8rem rgba(153, 72, 232, 0.1);
+  transform: translateY(-3px);
+}
+
+.operation-friction-marker {
+  position: relative;
+  display: inline-grid;
+  width: 2.45rem;
+  height: 2.45rem;
+  place-items: center;
+  margin-left: auto;
+  border: 1px solid rgba(117, 255, 196, 0.26);
+  border-radius: 0.72rem;
+  background: rgba(63, 255, 188, 0.075);
+  color: var(--color-positive);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.operation-friction-card h3 {
+  position: relative;
+  max-width: 17rem;
+  margin: clamp(2rem, 4vw, 3.4rem) 0 0;
+  font-size: clamp(1.28rem, 2.1vw, 1.68rem);
+  line-height: 1.12;
+}
+
+.operation-friction-card p {
+  position: relative;
+  max-width: 31rem;
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.72;
+}
+
+@media (max-width: 960px) {
+  .operation-problems-heading,
+  .operation-friction-board {
+    grid-template-columns: 1fr;
+  }
+
+  .operation-problems-heading h2 {
+    max-width: 16ch;
+  }
+
+  .operation-friction-board li,
+  .operation-friction-board li:nth-child(1),
+  .operation-friction-board li:nth-child(2) {
+    grid-column: auto;
+  }
+
+  .operation-friction-card {
+    min-height: auto;
+  }
+}

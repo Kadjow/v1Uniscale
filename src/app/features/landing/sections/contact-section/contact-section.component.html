@@ -1,0 +1,33 @@
+<section [id]="section().id" class="contact-section">
+  <header class="contact-heading" appRevealOnScroll>
+    <p>{{ section().eyebrow }}</p>
+    <h2>{{ section().title }}</h2>
+    <span>{{ section().description }}</span>
+  </header>
+
+  <form class="contact-lead-form" (submit)="previewSubmission($event)" appRevealOnScroll>
+    <p class="contact-form-status">{{ section().visualStatus }}</p>
+
+    @for (field of section().fields; track field.id) {
+      <label class="contact-form-field" [for]="field.id">
+        <span>{{ field.label }}</span>
+        @if (field.type === 'textarea') {
+          <textarea [id]="field.id" [name]="field.id" [placeholder]="field.placeholder"></textarea>
+        } @else {
+          <input [id]="field.id" [name]="field.id" [type]="field.type" [placeholder]="field.placeholder" />
+        }
+      </label>
+    }
+
+    <label class="contact-form-consent">
+      <input type="checkbox" />
+      <span>{{ section().consentLabel }}</span>
+    </label>
+
+    <button type="submit">{{ section().submitLabel }}</button>
+
+    @if (wasPreviewed()) {
+      <p class="contact-form-integration-note">{{ section().futureIntegrationNote }}</p>
+    }
+  </form>
+</section>

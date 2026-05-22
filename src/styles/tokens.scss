@@ -1,0 +1,41 @@
+:root {
+  color-scheme: dark;
+
+  --purple-900: #10011f;
+  --purple-800: #190430;
+  --purple-700: #230742;
+  --purple-600: #31105f;
+  --violet-500: #7f1ae2;
+  --violet-400: #a25bff;
+
+  --color-brand-primary: var(--violet-500);
+  --color-brand-accent: var(--violet-400);
+  --color-page-background: var(--purple-900);
+  --color-page-background-deep: #0a0116;
+  --color-page-background-ink: #0d031b;
+  --color-section-background: rgba(25, 4, 48, 0.78);
+  --color-section-background-soft: rgba(35, 7, 66, 0.46);
+  --color-background-dark: var(--color-page-background);
+  --color-surface-dark: rgba(27, 1, 53, 0.84);
+  --color-surface-elevated: rgba(45, 2, 88, 0.68);
+  --color-surface-premium: rgba(18, 3, 38, 0.78);
+  --color-surface-premium-strong: rgba(33, 6, 62, 0.82);
+  --color-text-primary: #f7f4ff;
+  --color-text-muted: #beb2d5;
+  --color-border-soft: rgba(212, 194, 255, 0.18);
+  --color-border-strong: rgba(218, 200, 255, 0.28);
+  --color-positive: #75ffc4;
+
+  --layout-max-width: 88rem;
+
+  --radius-card: 0.5rem;
+  --radius-panel: 1.25rem;
+
+  --shadow-panel: 0 1.5rem 5rem rgba(6, 1, 14, 0.42), 0 0 3rem rgba(127, 26, 226, 0.12);
+  --shadow-purple-glow: 0 1rem 2.8rem rgba(127, 26, 226, 0.34);
+  --shadow-section-depth: 0 2rem 6rem rgba(5, 0, 14, 0.36), 0 0 4rem rgba(127, 26, 226, 0.1);
+  --shadow-card-premium: 0 1.4rem 4rem rgba(5, 0, 14, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.035) inset;
+
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --transition-smooth: 180ms ease;
+}

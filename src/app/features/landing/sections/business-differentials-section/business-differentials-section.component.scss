@@ -1,0 +1,157 @@
+:host {
+  display: block;
+  position: relative;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(153, 72, 232, 0.16), transparent 25rem),
+    radial-gradient(circle at 8% 76%, rgba(117, 255, 196, 0.045), transparent 22rem),
+    linear-gradient(180deg, rgba(15, 2, 31, 0.88), rgba(30, 5, 58, 0.76), rgba(16, 2, 34, 0.9));
+  overflow: hidden;
+}
+
+:host::before,
+:host::after {
+  position: absolute;
+  pointer-events: none;
+  content: '';
+}
+
+:host::before {
+  inset: clamp(1rem, 3vw, 2rem) clamp(1rem, 4vw, 4rem);
+  border: 1px solid rgba(194, 160, 255, 0.11);
+  border-radius: var(--radius-panel);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.012)),
+    rgba(20, 4, 42, 0.28);
+  box-shadow: var(--shadow-section-depth);
+}
+
+:host::after {
+  inset: auto clamp(1rem, 4vw, 4rem) 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(218, 200, 255, 0.24), transparent);
+}
+
+.business-differentials-section {
+  position: relative;
+  max-width: var(--layout-max-width);
+  padding: clamp(4.25rem, 10vw, 7.5rem) clamp(1rem, 4vw, 4rem);
+  margin: 0 auto;
+}
+
+.business-differentials-heading {
+  max-width: 55rem;
+}
+
+.business-differentials-heading p {
+  width: fit-content;
+  padding: 0.42rem 0.72rem;
+  margin: 0 0 1rem;
+  border: 1px solid rgba(186, 145, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #d9c8ff;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.business-differentials-heading h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2.15rem, 5.2vw, 4.5rem);
+  line-height: 0.98;
+}
+
+.business-differentials-heading span {
+  display: block;
+  max-width: 43rem;
+  margin-top: 1.15rem;
+  color: var(--color-text-muted);
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+  line-height: 1.72;
+}
+
+.business-differential-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 0;
+  margin: clamp(2.25rem, 6vw, 4.25rem) 0 0;
+  list-style: none;
+}
+
+.business-differential-panel {
+  position: relative;
+  display: grid;
+  min-height: 18rem;
+  height: 100%;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid rgba(194, 160, 255, 0.19);
+  border-radius: var(--radius-card);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(153, 72, 232, 0.18), transparent 11rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.024)),
+    rgba(12, 2, 28, 0.86);
+  box-shadow: var(--shadow-card-premium);
+  overflow: hidden;
+  transition:
+    border-color var(--transition-smooth),
+    box-shadow var(--transition-smooth),
+    transform var(--transition-smooth);
+}
+
+.business-differential-panel::before {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.07), transparent),
+    linear-gradient(180deg, rgba(117, 255, 196, 0.08), transparent 34%);
+  opacity: 0.7;
+}
+
+.business-differential-panel:hover {
+  border-color: rgba(218, 200, 255, 0.34);
+  box-shadow: 0 1.6rem 4.4rem rgba(5, 0, 14, 0.32), 0 0 2.5rem rgba(153, 72, 232, 0.1);
+  transform: translateY(-3px);
+}
+
+.business-differential-number {
+  position: relative;
+  display: inline-grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  border: 1px solid rgba(194, 160, 255, 0.24);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.055);
+  color: #d9c8ff;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.business-differential-panel h3 {
+  position: relative;
+  margin: clamp(2.5rem, 4vw, 4rem) 0 0;
+  font-size: clamp(1.32rem, 2.1vw, 1.7rem);
+  line-height: 1.12;
+}
+
+.business-differential-panel p {
+  position: relative;
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.72;
+}
+
+@media (max-width: 920px) {
+  .business-differential-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-differential-panel {
+    min-height: auto;
+  }
+}

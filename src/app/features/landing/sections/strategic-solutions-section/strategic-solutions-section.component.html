@@ -1,0 +1,19 @@
+<section [id]="section().id" class="strategic-solutions-section">
+  <header class="strategic-solutions-heading" appRevealOnScroll>
+    <p>{{ section().eyebrow }}</p>
+    <h2>{{ section().title }}</h2>
+    <span>{{ section().description }}</span>
+  </header>
+
+  <ul class="strategic-solution-matrix">
+    @for (solution of section().cards; track solution.title; let position = $index) {
+      <li appRevealOnScroll>
+        <article class="strategic-solution-panel">
+          <span class="strategic-solution-symbol">{{ position + 1 }}</span>
+          <h3>{{ solution.title }}</h3>
+          <p>{{ solution.description }}</p>
+        </article>
+      </li>
+    }
+  </ul>
+</section>
