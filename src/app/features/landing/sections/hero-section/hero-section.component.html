@@ -26,7 +26,12 @@
 
     <div class="operation-map-flow" aria-label="Fluxo de transformação operacional">
       @for (indicator of hero().operationPanel.indicators; track indicator.label; let position = $index) {
-        <article class="operation-map-stage" [class.operation-map-stage--middle]="position === 1">
+        <article
+          class="operation-map-stage"
+          [class.operation-map-stage--entry]="position === 0"
+          [class.operation-map-stage--middle]="position === 1"
+          [class.operation-map-stage--output]="position === 2"
+        >
           <span>{{ indicator.label }}</span>
           <strong>{{ indicator.value }}</strong>
         </article>

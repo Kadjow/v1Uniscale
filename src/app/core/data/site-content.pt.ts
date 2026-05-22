@@ -14,37 +14,41 @@ export const siteContentPt: SiteContent = {
     ],
   },
   hero: {
-    eyebrow: 'Processos claros. Tecnologia com propósito.',
-    title: 'Processos caóticos? Escale sua operação com inteligência.',
+    eyebrow: 'Operação clara para crescer com controle',
+    title: 'Organize o caos operacional antes de escalar.',
     description:
-      'A Uniscale organiza processos, conecta sistemas e aplica tecnologia onde ela realmente sustenta crescimento: na rotina, nos dados e nas decisões da operação.',
-    primaryAction: { label: 'Iniciar transformação', href: '#contato' },
-    secondaryAction: { label: 'Conhecer soluções', href: '#solucoes' },
+      'A Uniscale transforma processos soltos, sistemas isolados e dados dispersos em uma operação conectada, automatizada e pronta para crescer com clareza.',
+    primaryAction: { label: 'Mapear minha operação', href: '#contato' },
+    secondaryAction: { label: 'Ver como organizamos', href: '#solucoes' },
     operationPanel: {
-      label: 'Fluxo Uniscale',
-      title: 'Do caos operacional à operação conectada',
-      status: 'Operação em clareza',
+      label: 'Camada Uniscale',
+      title: 'Do ruído operacional a uma rotina conectada',
+      status: 'Fluxo organizado',
       indicators: [
-        { label: 'Entrada', value: 'Processos manuais, sistemas isolados e retrabalho' },
-        { label: 'Camada Uniscale', value: 'Diagnóstico, automação, integração e inteligência' },
-        { label: 'Saída', value: 'Dados claros, previsibilidade e controle para escalar' },
+        { label: 'Entrada caótica', value: 'Tarefas manuais, dados soltos e retrabalho' },
+        { label: 'Camada Uniscale', value: 'Diagnóstico, organização, automação e integração' },
+        { label: 'Operação clara', value: 'Processos conectados, contexto comum e controle' },
       ],
       flows: [
         {
           label: 'Diagnóstico',
-          description: 'Entendemos o fluxo real, os gargalos e as dependências que travam a operação.',
+          description: 'Fluxo real, gargalos e pontos de perda de controle.',
         },
         {
           label: 'Organização',
-          description: 'Estruturamos processos antes de transformar tecnologia em solução.',
+          description: 'Processos reordenados antes da solução técnica.',
         },
         {
           label: 'Automação',
-          description: 'Reduzimos tarefas repetitivas e criamos rotinas mais rastreáveis.',
+          description: 'Execução rastreável para tarefas repetitivas.',
         },
         {
           label: 'Integração',
-          description: 'Conectamos sistemas e dados para a operação enxergar o mesmo contexto.',
+          description: 'Sistemas e dados trabalhando no mesmo contexto.',
+        },
+        {
+          label: 'Visibilidade',
+          description: 'Sinais claros para decisão e evolução contínua.',
         },
       ],
     },
