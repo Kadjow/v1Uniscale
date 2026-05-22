@@ -21,11 +21,40 @@ body {
     radial-gradient(circle at 100% 44rem, rgba(117, 255, 196, 0.06), transparent 28rem),
     linear-gradient(180deg, #22073e 0%, var(--purple-900) 28rem, var(--color-page-background-ink) 100%);
   color: var(--color-text-primary);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
+
+
+h1,
+h2,
+h3,
+.hero-message h1,
+.hero-eyebrow,
+.hero-primary-action,
+.hero-secondary-action,
+.contact-submit-action,
+.section-badge,
+[class*='-heading'] > p:first-child,
+[class*='-heading'] h2 {
+  font-family: var(--font-display);
+}
+
+h1,
+h2,
+h3,
+.hero-message h1,
+[class*='-heading'] h2 {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-message h1 {
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-weight: 760;
+}
 body::before,
 body::after {
   position: fixed;
