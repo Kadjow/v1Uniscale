@@ -6,17 +6,17 @@
   </header>
 
   <ul class="strategic-solution-matrix">
-    @for (solution of section().cards; track solution.title; let position = $index) {
+    @for (solution of section().cards; track solution.title) {
       <li appRevealOnScroll>
         <article class="strategic-solution-panel">
-          <span class="strategic-solution-symbol">{{ position + 1 }}</span>
-          <h3>{{ solution.title }}</h3>
-          <p>{{ solution.description }}</p>
-          <span class="solution-visual-flow" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+          <div class="strategic-solution-content">
+            @if (solution.tag) {
+              <span class="strategic-solution-tag">{{ solution.tag }}</span>
+            }
+
+            <h3>{{ solution.title }}</h3>
+            <p>{{ solution.description }}</p>
+          </div>
         </article>
       </li>
     }

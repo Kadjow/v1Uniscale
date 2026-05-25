@@ -46,6 +46,7 @@ export interface SectionWithCards {
 export interface TextCardContent {
   title: string;
   description: string;
+  tag?: string;
 }
 
 export interface MethodSectionContent {

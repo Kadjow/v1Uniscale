@@ -63,29 +63,34 @@ export const siteContentPt: SiteContent = {
       'Antes de implementar tecnologia, entendemos a operação, organizamos processos e desenhamos soluções que realmente sustentam crescimento.',
     cards: [
       {
+        tag: 'Operação',
         title: 'Automação de processos',
         description:
-          'Transformamos tarefas manuais em fluxos automáticos com regra, rastreabilidade e menos dependência de esforço repetitivo.',
+          'Transformamos tarefas manuais em fluxos automáticos com regra, rastreabilidade e menos esforço repetitivo.',
       },
       {
+        tag: 'Dados',
         title: 'Integração de sistemas',
         description:
-          'Conectamos ferramentas para que dados circulem com consistência e a operação pare de trabalhar em ilhas.',
+          'Conectamos ferramentas para que informações circulem com consistência e a operação deixe de trabalhar em ilhas.',
       },
       {
+        tag: 'Inteligência',
         title: 'Inteligência artificial',
         description:
-          'Aplicamos IA com objetivo claro: organizar informação, apoiar análises, acelerar respostas ou executar tarefas específicas.',
+          'Aplicamos IA onde ela realmente melhora análise, atendimento, automação ou tomada de decisão.',
       },
       {
+        tag: 'Produto',
         title: 'Desenvolvimento de sistemas',
         description:
           'Criamos sistemas sob medida para fluxos que precisam de controle, visibilidade e evolução contínua.',
       },
       {
+        tag: 'Velocidade',
         title: 'Low-code / No-code',
         description:
-          'Estruturamos soluções ágeis quando velocidade, validação e autonomia operacional são parte essencial do projeto.',
+          'Estruturamos soluções ágeis para validar processos, reduzir complexidade e acelerar entregas.',
       },
     ],
   },
