@@ -12,42 +12,4 @@
       </a>
     </nav>
   </header>
-
-  <aside class="hero-operation-map" appRevealOnScroll>
-    <div class="operation-map-topbar">
-      <strong>{{ hero().operationPanel.label }}</strong>
-      <span>{{ hero().operationPanel.status }}</span>
-    </div>
-
-    <section class="operation-map-heading" aria-labelledby="operation-map-title">
-      <img src="assets/images/logo-uniscale.png" [alt]="hero().operationPanel.label" />
-      <h2 id="operation-map-title">{{ hero().operationPanel.title }}</h2>
-    </section>
-
-    <div class="operation-map-flow" aria-label="Fluxo de transformação operacional">
-      @for (indicator of hero().operationPanel.indicators; track indicator.label; let position = $index) {
-        <article
-          class="operation-map-stage"
-          [class.operation-map-stage--entry]="position === 0"
-          [class.operation-map-stage--middle]="position === 1"
-          [class.operation-map-stage--output]="position === 2"
-        >
-          <span>{{ indicator.label }}</span>
-          <strong>{{ indicator.value }}</strong>
-        </article>
-      }
-    </div>
-
-    <ol class="operation-map-capabilities">
-      @for (flow of hero().operationPanel.flows; track flow.label; let position = $index) {
-        <li>
-          <span>{{ position + 1 }}</span>
-          <div>
-            <strong>{{ flow.label }}</strong>
-            <p>{{ flow.description }}</p>
-          </div>
-        </li>
-      }
-    </ol>
-  </aside>
 </section>

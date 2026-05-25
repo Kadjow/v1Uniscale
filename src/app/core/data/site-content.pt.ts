@@ -20,38 +20,6 @@ export const siteContentPt: SiteContent = {
       'A Uniscale transforma processos soltos, sistemas isolados e dados dispersos em uma operação conectada, automatizada e pronta para crescer com clareza.',
     primaryAction: { label: 'Mapear minha operação', href: '#contato' },
     secondaryAction: { label: 'Ver como organizamos', href: '#solucoes' },
-    operationPanel: {
-      label: 'Camada Uniscale',
-      title: 'Do ruído operacional a uma rotina conectada',
-      status: 'Fluxo organizado',
-      indicators: [
-        { label: 'Entrada caótica', value: 'Tarefas manuais, dados soltos e retrabalho' },
-        { label: 'Camada Uniscale', value: 'Diagnóstico, organização, automação e integração' },
-        { label: 'Operação clara', value: 'Processos conectados, contexto comum e controle' },
-      ],
-      flows: [
-        {
-          label: 'Diagnóstico',
-          description: 'Fluxo real, gargalos e pontos de perda de controle.',
-        },
-        {
-          label: 'Organização',
-          description: 'Processos reordenados antes da solução técnica.',
-        },
-        {
-          label: 'Automação',
-          description: 'Execução rastreável para tarefas repetitivas.',
-        },
-        {
-          label: 'Integração',
-          description: 'Sistemas e dados trabalhando no mesmo contexto.',
-        },
-        {
-          label: 'Visibilidade',
-          description: 'Sinais claros para decisão e evolução contínua.',
-        },
-      ],
-    },
   },
   operationProblems: {
     id: 'problemas',
