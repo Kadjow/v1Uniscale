@@ -28,30 +28,11 @@ export interface HeroContent {
   description: string;
   primaryAction: ActionLink;
   secondaryAction: ActionLink;
-  operationPanel: OperationPanelContent;
 }
 
 export interface ActionLink {
   label: string;
   href: string;
-}
-
-export interface OperationPanelContent {
-  label: string;
-  title: string;
-  status: string;
-  indicators: MetricContent[];
-  flows: OperationFlowContent[];
-}
-
-export interface MetricContent {
-  label: string;
-  value: string;
-}
-
-export interface OperationFlowContent {
-  label: string;
-  description: string;
 }
 
 export interface SectionWithCards {
