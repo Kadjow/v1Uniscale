@@ -68,11 +68,10 @@ export interface BusinessProofContent {
   eyebrow: string;
   title: string;
   description: string;
-  highlights: TextCardContent[];
   testimonials: ImageContent[];
   partnersLabel: string;
+  partnersDescription?: string;
   partners: ImageContent[];
-  note: string;
 }
 
 export interface ImageContent {
@@ -108,5 +107,10 @@ export interface FooterContent {
   email: string;
   phone: string;
   copyright: string;
-  links: NavigationLink[];
+  links: FooterLinkContent[];
+}
+
+export interface FooterLinkContent {
+  label: string;
+  href?: string;
 }

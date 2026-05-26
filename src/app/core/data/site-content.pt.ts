@@ -156,40 +156,22 @@ export const siteContentPt: SiteContent = {
     eyebrow: 'Validação real',
     title: 'Empresas já avançaram com processos mais claros e tecnologia aplicada.',
     description:
-      'A prova social da Uniscale parte do que já está publicado pela própria marca: relatos, parceiros e uma atuação focada em organizar operações antes de aplicar tecnologia.',
-    highlights: [
-      {
-        title: 'Relatos preservados',
-        description:
-          'Os cards de depoimento usam as imagens reais já disponíveis no projeto, sem reescrever falas ou criar validações artificiais.',
-      },
-      {
-        title: 'Marcas existentes',
-        description:
-          'A área de parceiros exibe apenas logos presentes nos assets públicos extraídos do site atual da Uniscale.',
-      },
-      {
-        title: 'Base preparada',
-        description:
-          'A seção fica pronta para receber novos cases e métricas quando forem validados, mantendo a comunicação comercial sem exageros.',
-      },
-    ],
+      'Relatos e parceiros publicados pela Uniscale mostram uma atuação focada em organizar operações antes de aplicar tecnologia.',
     testimonials: [
-      { src: 'assets/images/proof/testimonial-1.png', alt: 'Depoimento real publicado no site da Uniscale' },
-      { src: 'assets/images/proof/testimonial-2.png', alt: 'Depoimento real publicado no site da Uniscale' },
-      { src: 'assets/images/proof/testimonial-3.png', alt: 'Depoimento real publicado no site da Uniscale' },
-      { src: 'assets/images/proof/testimonial-4.png', alt: 'Depoimento real publicado no site da Uniscale' },
+      { src: 'assets/images/proof/testimonial-1.png', alt: 'Depoimento de Rafael Correia sobre a Uniscale' },
+      { src: 'assets/images/proof/testimonial-2.png', alt: 'Depoimento de Roberto Régis sobre a Uniscale' },
+      { src: 'assets/images/proof/testimonial-3.png', alt: 'Depoimento de Gustavo Costa sobre a Uniscale' },
+      { src: 'assets/images/proof/testimonial-4.png', alt: 'Depoimento de Willian Ortega sobre a Uniscale' },
     ],
-    partnersLabel: 'Empresas e parceiros presentes nos materiais atuais da Uniscale:',
+    partnersLabel: 'Empresas e parceiros',
+    partnersDescription: 'Marcas presentes nos projetos e materiais atuais da Uniscale.',
     partners: [
-      { src: 'assets/images/proof/partner-braff.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-comuniq.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-une-eventos.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-uniguacu-hub.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-william-ortega.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
+      { src: 'assets/images/proof/partner-braff.png', alt: 'Logo BRAFF Brasil de Fisiculturismo e Fitness' },
+      { src: 'assets/images/proof/partner-comuniq.png', alt: 'Logo Comuniq AG' },
+      { src: 'assets/images/proof/partner-une-eventos.png', alt: 'Logo UNE Eventos' },
+      { src: 'assets/images/proof/partner-uniguacu-hub.png', alt: 'Logo Grupo Uniguaçu Hub' },
+      { src: 'assets/images/proof/partner-william-ortega.png', alt: 'Logo Instituto Willian Ortega' },
     ],
-    note:
-      'Prova social construída apenas com assets reais do site atual da Uniscale. Sem clientes, cases, marcas ou métricas inventadas.',
   },
   contact: {
     id: 'contato',
@@ -233,8 +215,8 @@ export const siteContentPt: SiteContent = {
     phone: '(45) 3197-7459',
     copyright: 'UNISCALE - 2026 © Todos os direitos reservados',
     links: [
-      { label: 'Termos e Políticas', href: '#' },
-      { label: 'Central de Ajuda', href: '#' },
+      { label: 'Termos e Políticas' },
+      { label: 'Central de Ajuda' },
     ],
   },
 };
