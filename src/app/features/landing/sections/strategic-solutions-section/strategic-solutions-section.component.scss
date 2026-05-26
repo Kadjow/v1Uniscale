@@ -213,6 +213,10 @@
 }
 
 @media (max-width: 920px) {
+  .strategic-solutions-section {
+    padding-block: clamp(3.25rem, 9vw, 4.9rem);
+  }
+
   .strategic-solutions-heading h2 {
     font-size: 3.65rem;
   }
@@ -238,11 +242,12 @@
 
 @media (max-width: 640px) {
   .strategic-solutions-section {
-    padding-inline: clamp(1rem, 5vw, 1.35rem);
+    padding: clamp(3.15rem, 12vw, 4rem) clamp(1rem, 5vw, 1.35rem);
   }
 
   .strategic-solutions-heading h2 {
-    font-size: 2.58rem;
+    font-size: clamp(1.86rem, 8vw, 2.28rem);
+    overflow-wrap: anywhere;
   }
 
   .strategic-solutions-heading span {
@@ -257,7 +262,7 @@
 
   .strategic-solution-panel {
     min-height: auto;
-    padding: 1.28rem;
+    padding: 1.12rem;
     border-radius: 1.1rem;
   }
 

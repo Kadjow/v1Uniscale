@@ -99,10 +99,26 @@
 @media (max-width: 820px) {
   .site-footer {
     grid-template-columns: 1fr;
+    gap: 1.55rem;
+    padding-top: clamp(2.4rem, 8vw, 3.4rem);
   }
 
   .site-footer-legal {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding-inline: clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .site-footer-brand img {
+    width: 7rem;
+  }
+
+  .site-footer-legal ul {
+    gap: 0.65rem;
   }
 }
