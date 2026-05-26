@@ -17,6 +17,11 @@ export class SiteHeaderComponent {
     this.isScrolled.set(window.scrollY > 16);
   }
 
+  @HostListener('document:keydown.escape')
+  protected closeMenuOnEscape(): void {
+    this.closeMenu();
+  }
+
   protected toggleMenu(): void {
     this.isMenuOpen.update((isOpen) => !isOpen);
   }

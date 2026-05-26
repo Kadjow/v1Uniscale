@@ -5,39 +5,90 @@
       <h2>{{ section().title }}</h2>
       <span>{{ section().description }}</span>
     </header>
-
-    <aside class="business-proof-summary" appRevealOnScroll>
-      <ul>
-        @for (highlight of section().highlights; track highlight.title) {
-          <li>
-            <h3>{{ highlight.title }}</h3>
-            <p>{{ highlight.description }}</p>
-          </li>
-        }
-      </ul>
-    </aside>
   </div>
 
   <div class="business-proof-evidence">
-    <div class="business-proof-testimonials" aria-label="Depoimentos publicados pela Uniscale">
-      @for (testimonial of section().testimonials; track testimonial.src; let first = $first) {
-        <figure [class.is-featured]="first" appRevealOnScroll>
-          <img [src]="testimonial.src" [alt]="testimonial.alt" loading="lazy" />
-        </figure>
-      }
+    <div
+      class="proof-carousel-group"
+      (mouseenter)="setCarouselHover('testimonials', true)"
+      (mouseleave)="setCarouselHover('testimonials', false)"
+      (focusin)="setCarouselFocus($event, 'testimonials', true)"
+      (focusout)="setCarouselFocus($event, 'testimonials', false)"
+      appRevealOnScroll
+    >
+      <div class="proof-carousel-shell">
+        <button
+          class="carousel-arrow carousel-arrow--previous"
+          type="button"
+          aria-label="Ver depoimento anterior"
+          (click)="moveTestimonialsCarousel(-1)"
+        >
+          <span aria-hidden="true">&#8249;</span>
+        </button>
+        <div class="proof-carousel" aria-label="Depoimentos publicados pela Uniscale">
+          <div class="proof-track" #testimonialsTrack>
+            @for (testimonial of testimonialsLoop(); track testimonial.src + $index; let index = $index) {
+              <figure class="proof-card" [attr.aria-hidden]="index >= section().testimonials.length ? true : null">
+                <img [src]="testimonial.src" [alt]="testimonial.alt" loading="lazy" />
+              </figure>
+            }
+          </div>
+        </div>
+        <button
+          class="carousel-arrow carousel-arrow--next"
+          type="button"
+          aria-label="Ver pr&oacute;ximo depoimento"
+          (click)="moveTestimonialsCarousel(1)"
+        >
+          <span aria-hidden="true">&#8250;</span>
+        </button>
+      </div>
     </div>
 
-    <section class="business-proof-partners" aria-label="Empresas que já avançaram com a Uniscale" appRevealOnScroll>
-      <p>{{ section().partnersLabel }}</p>
-      <ul>
-        @for (partner of section().partners; track partner.src) {
-          <li>
-            <img [src]="partner.src" [alt]="partner.alt" loading="lazy" />
-          </li>
-        }
-      </ul>
+    <section
+      class="business-proof-partners"
+      aria-label="Empresas que já avançaram com a Uniscale"
+      (mouseenter)="setCarouselHover('partners', true)"
+      (mouseleave)="setCarouselHover('partners', false)"
+      (focusin)="setCarouselFocus($event, 'partners', true)"
+      (focusout)="setCarouselFocus($event, 'partners', false)"
+      appRevealOnScroll
+    >
+      <div class="partners-heading">
+        <div>
+          <p>{{ section().partnersLabel }}</p>
+          @if (section().partnersDescription; as partnersDescription) {
+            <span>{{ partnersDescription }}</span>
+          }
+        </div>
+      </div>
+      <div class="partners-carousel-shell">
+        <button
+          class="carousel-arrow carousel-arrow--previous"
+          type="button"
+          aria-label="Ver parceiro anterior"
+          (click)="movePartnersCarousel(-1)"
+        >
+          <span aria-hidden="true">&#8249;</span>
+        </button>
+        <div class="partners-carousel">
+          <ul class="partners-track" #partnersTrack>
+            @for (partner of partnersLoop(); track partner.src + $index; let index = $index) {
+              <li class="partner-logo-card" [attr.aria-hidden]="index >= section().partners.length ? true : null">
+                <img [src]="partner.src" [alt]="partner.alt" loading="lazy" />
+              </li>
+            }
+          </ul>
+        </div>
+        <button
+          class="carousel-arrow carousel-arrow--next"
+          type="button"
+          aria-label="Ver pr&oacute;ximo parceiro"
+          (click)="movePartnersCarousel(1)"
+        >
+          <span aria-hidden="true">&#8250;</span>
+        </button>
+      </div>
     </section>
   </div>
-
-  <p class="business-proof-note" appRevealOnScroll>{{ section().note }}</p>
 </section>
