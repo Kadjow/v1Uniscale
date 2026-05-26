@@ -159,6 +159,10 @@
 }
 
 @media (max-width: 960px) {
+  .operation-problems-section {
+    padding-block: clamp(3rem, 9vw, 4.75rem);
+  }
+
   .operation-problems-intro,
   .operation-problems-grid {
     grid-template-columns: 1fr;
@@ -189,6 +193,10 @@
 }
 
 @media (max-width: 640px) {
+  .operation-problems-section {
+    padding-inline: clamp(1rem, 5vw, 1.35rem);
+  }
+
   .operation-problems-intro {
     padding: 1.15rem;
     border-radius: 1rem;
@@ -196,10 +204,24 @@
 
   .operation-problems-intro h2 {
     max-width: 100%;
-    font-size: clamp(1.72rem, 8.6vw, 2.05rem);
+    font-size: clamp(1.68rem, 7.6vw, 2rem);
+    overflow-wrap: anywhere;
   }
 
   .operation-problem-panel {
     padding: 1rem;
+  }
+
+  .operation-problems-grid {
+    gap: 0.85rem;
+    margin-top: 1.05rem;
+  }
+
+  .operation-problem-panel h3 {
+    margin-top: 0.9rem;
+  }
+
+  .operation-problem-panel p {
+    line-height: 1.54;
   }
 }

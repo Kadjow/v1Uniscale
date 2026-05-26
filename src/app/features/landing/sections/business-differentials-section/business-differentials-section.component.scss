@@ -147,11 +147,72 @@
 }
 
 @media (max-width: 920px) {
+  .business-differentials-section {
+    padding-block: clamp(3.2rem, 9vw, 4.6rem);
+  }
+
+  .business-differentials-heading h2 {
+    font-size: clamp(2rem, 7vw, 3.2rem);
+    overflow-wrap: anywhere;
+  }
+
+  .business-differentials-heading span {
+    margin-top: 0.9rem;
+  }
+
   .business-differential-grid {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-top: clamp(1.65rem, 6vw, 2.6rem);
   }
 
   .business-differential-panel {
     min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  :host::before {
+    inset: 1rem;
+    border-radius: 1rem;
+  }
+
+  .business-differentials-section {
+    padding: clamp(3rem, 12vw, 4rem) clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .business-differentials-heading p {
+    margin-bottom: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .business-differentials-heading h2 {
+    max-width: 10.5ch;
+    font-size: clamp(1.72rem, 7.4vw, 2.08rem);
+    line-height: 1.02;
+  }
+
+  .business-differentials-heading span {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .business-differential-panel {
+    padding: 1.1rem;
+  }
+
+  .business-differential-number {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .business-differential-panel h3 {
+    margin-top: 1.35rem;
+    font-size: 1.28rem;
+  }
+
+  .business-differential-panel p {
+    margin-top: 0.72rem;
+    line-height: 1.58;
   }
 }

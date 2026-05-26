@@ -23,7 +23,13 @@
     <p>{{ footer().copyright }}</p>
     <ul>
       @for (link of footer().links; track link.label) {
-        <li><a [href]="link.href">{{ link.label }}</a></li>
+        <li>
+          @if (link.href) {
+            <a [href]="link.href">{{ link.label }}</a>
+          } @else {
+            <span>{{ link.label }}</span>
+          }
+        </li>
       }
     </ul>
   </section>

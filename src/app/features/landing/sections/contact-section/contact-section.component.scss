@@ -215,6 +215,7 @@
 @media (max-width: 920px) {
   .contact-section {
     grid-template-columns: 1fr;
+    padding-block: clamp(3.25rem, 9vw, 4.85rem);
   }
 
   .contact-heading {
@@ -223,8 +224,50 @@
 }
 
 @media (max-width: 640px) {
+  .contact-section {
+    gap: 1.35rem;
+    padding: clamp(3.1rem, 12vw, 4rem) clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .contact-heading h2 {
+    font-size: clamp(1.78rem, 7.6vw, 2.12rem);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-heading span {
+    margin-top: 0.85rem;
+    line-height: 1.6;
+  }
+
   .contact-lead-form {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .contact-form-status {
+    max-width: 100%;
+    border-radius: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .contact-form-field input {
+    min-height: 2.95rem;
+  }
+
+  .contact-form-field textarea {
+    min-height: 7.5rem;
+  }
+
+  .contact-form-consent {
+    gap: 0.62rem;
+    font-size: 0.92rem;
+  }
+
+  .contact-lead-form button {
+    min-height: 3.05rem;
   }
 }
 

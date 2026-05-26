@@ -63,29 +63,34 @@ export const siteContentPt: SiteContent = {
       'Antes de implementar tecnologia, entendemos a operação, organizamos processos e desenhamos soluções que realmente sustentam crescimento.',
     cards: [
       {
+        tag: 'Operação',
         title: 'Automação de processos',
         description:
-          'Transformamos tarefas manuais em fluxos automáticos com regra, rastreabilidade e menos dependência de esforço repetitivo.',
+          'Transformamos tarefas manuais em fluxos automáticos com regra, rastreabilidade e menos esforço repetitivo.',
       },
       {
+        tag: 'Dados',
         title: 'Integração de sistemas',
         description:
-          'Conectamos ferramentas para que dados circulem com consistência e a operação pare de trabalhar em ilhas.',
+          'Conectamos ferramentas para que informações circulem com consistência e a operação deixe de trabalhar em ilhas.',
       },
       {
+        tag: 'Inteligência',
         title: 'Inteligência artificial',
         description:
-          'Aplicamos IA com objetivo claro: organizar informação, apoiar análises, acelerar respostas ou executar tarefas específicas.',
+          'Aplicamos IA onde ela realmente melhora análise, atendimento, automação ou tomada de decisão.',
       },
       {
+        tag: 'Produto',
         title: 'Desenvolvimento de sistemas',
         description:
           'Criamos sistemas sob medida para fluxos que precisam de controle, visibilidade e evolução contínua.',
       },
       {
+        tag: 'Velocidade',
         title: 'Low-code / No-code',
         description:
-          'Estruturamos soluções ágeis quando velocidade, validação e autonomia operacional são parte essencial do projeto.',
+          'Estruturamos soluções ágeis para validar processos, reduzir complexidade e acelerar entregas.',
       },
     ],
   },
@@ -151,40 +156,22 @@ export const siteContentPt: SiteContent = {
     eyebrow: 'Validação real',
     title: 'Empresas já avançaram com processos mais claros e tecnologia aplicada.',
     description:
-      'A prova social da Uniscale parte do que já está publicado pela própria marca: relatos, parceiros e uma atuação focada em organizar operações antes de aplicar tecnologia.',
-    highlights: [
-      {
-        title: 'Relatos preservados',
-        description:
-          'Os cards de depoimento usam as imagens reais já disponíveis no projeto, sem reescrever falas ou criar validações artificiais.',
-      },
-      {
-        title: 'Marcas existentes',
-        description:
-          'A área de parceiros exibe apenas logos presentes nos assets públicos extraídos do site atual da Uniscale.',
-      },
-      {
-        title: 'Base preparada',
-        description:
-          'A seção fica pronta para receber novos cases e métricas quando forem validados, mantendo a comunicação comercial sem exageros.',
-      },
-    ],
+      'Relatos e parceiros publicados pela Uniscale mostram uma atuação focada em organizar operações antes de aplicar tecnologia.',
     testimonials: [
-      { src: 'assets/images/proof/testimonial-1.png', alt: 'Depoimento real publicado no site da Uniscale' },
-      { src: 'assets/images/proof/testimonial-2.png', alt: 'Depoimento real publicado no site da Uniscale' },
-      { src: 'assets/images/proof/testimonial-3.png', alt: 'Depoimento real publicado no site da Uniscale' },
-      { src: 'assets/images/proof/testimonial-4.png', alt: 'Depoimento real publicado no site da Uniscale' },
+      { src: 'assets/images/proof/testimonial-1.png', alt: 'Depoimento de Rafael Correia sobre a Uniscale' },
+      { src: 'assets/images/proof/testimonial-2.png', alt: 'Depoimento de Roberto Régis sobre a Uniscale' },
+      { src: 'assets/images/proof/testimonial-3.png', alt: 'Depoimento de Gustavo Costa sobre a Uniscale' },
+      { src: 'assets/images/proof/testimonial-4.png', alt: 'Depoimento de Willian Ortega sobre a Uniscale' },
     ],
-    partnersLabel: 'Empresas e parceiros presentes nos materiais atuais da Uniscale:',
+    partnersLabel: 'Empresas e parceiros',
+    partnersDescription: 'Marcas presentes nos projetos e materiais atuais da Uniscale.',
     partners: [
-      { src: 'assets/images/proof/partner-braff.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-comuniq.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-une-eventos.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-uniguacu-hub.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
-      { src: 'assets/images/proof/partner-william-ortega.png', alt: 'Logo de parceiro publicado no site da Uniscale' },
+      { src: 'assets/images/proof/partner-braff.png', alt: 'Logo BRAFF Brasil de Fisiculturismo e Fitness' },
+      { src: 'assets/images/proof/partner-comuniq.png', alt: 'Logo Comuniq AG' },
+      { src: 'assets/images/proof/partner-une-eventos.png', alt: 'Logo UNE Eventos' },
+      { src: 'assets/images/proof/partner-uniguacu-hub.png', alt: 'Logo Grupo Uniguaçu Hub' },
+      { src: 'assets/images/proof/partner-william-ortega.png', alt: 'Logo Instituto Willian Ortega' },
     ],
-    note:
-      'Prova social construída apenas com assets reais do site atual da Uniscale. Sem clientes, cases, marcas ou métricas inventadas.',
   },
   contact: {
     id: 'contato',
@@ -228,8 +215,8 @@ export const siteContentPt: SiteContent = {
     phone: '(45) 3197-7459',
     copyright: 'UNISCALE - 2026 © Todos os direitos reservados',
     links: [
-      { label: 'Termos e Políticas', href: '#' },
-      { label: 'Central de Ajuda', href: '#' },
+      { label: 'Termos e Políticas' },
+      { label: 'Central de Ajuda' },
     ],
   },
 };

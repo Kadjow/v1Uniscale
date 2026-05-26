@@ -154,6 +154,10 @@
 }
 
 @media (max-width: 1040px) {
+  .implementation-method-section {
+    padding-block: clamp(3.25rem, 9vw, 4.85rem);
+  }
+
   .implementation-method-heading,
   .implementation-journey {
     grid-template-columns: 1fr;
@@ -190,5 +194,59 @@
     left: 1.38rem;
     width: 1px;
     height: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .implementation-method-section {
+    padding: clamp(3.1rem, 12vw, 4rem) clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .implementation-method-heading {
+    gap: 0.95rem;
+  }
+
+  .implementation-method-heading p {
+    font-size: 0.7rem;
+  }
+
+  .implementation-method-heading h2 {
+    font-size: clamp(1.78rem, 7.6vw, 2.12rem);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+  }
+
+  .implementation-method-heading span {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .implementation-journey {
+    gap: 0.85rem;
+    margin-top: 1.55rem;
+  }
+
+  .implementation-journey-step {
+    padding: 1.05rem 1.05rem 1.05rem 3.75rem;
+  }
+
+  .implementation-journey-marker {
+    top: 1.05rem;
+    left: 1rem;
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .implementation-journey::before {
+    left: 1.17rem;
+  }
+
+  .implementation-journey-link {
+    left: 1.17rem;
+  }
+
+  .implementation-journey-step p {
+    margin-top: 0.72rem;
+    line-height: 1.58;
   }
 }
