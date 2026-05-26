@@ -10,6 +10,14 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+*.log
+pnpm-debug.log*
+.env
+.env.*
+*.tmp
+*.bak
+*.backup
+*.old
 
 # IDEs and editors
 .idea/
